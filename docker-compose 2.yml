@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    container_name: morning_star_bot
+    restart: always
+    env_file: .env
+    environment:
+      DB_PATH: /data/morning_star.db
+    volumes:
+      - ./data:/data
